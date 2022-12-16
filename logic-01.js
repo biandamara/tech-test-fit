@@ -12,22 +12,22 @@
 // output yang diharapkan: 4
 
 const pairSocks = (arr) => {
-  // deklarasi index array mulai dengan nilai 0
+  // deklarasi variabel untuk mencatat nilai pasang kaos kaki
   let counterPairSocks = 0;
 
-  // looping array pertama untuk mendaptkan nilai index pertama
+  // looping array pertama untuk mencari nilai index pertama
   for (let a = 0; a < arr.length; a++) {
-    // looping array kedua kali untuk mendapatkan nilai index kedua dengan kondisi
+    // looping array kedua kali untuk mencari nilai index sebagai pasangan
     for (let b = 0; b < arr.length; b++) {
-      // mendapatkan nilai index kedua dari looping array kedua kali
-      // nilai index array looping pertama tidak boleh sama dengan nilai index array looping kedua kali
+      // mendapatkan nilai index array kedua dari looping array kedua kali
+      // syarat arr[a] != "x" diberikan sebagai kaos kaki yang terlah berpasangan tidak dihitung kambali
+      // syarat a != b diberikan agar nilai index array yang sama tidak dianggan sebagai pasang kaos kaki
       if (arr[a] == arr[b] && arr[a] != "x" && a != b) {
-        // setiap nilai index dari array looping akan diberikian nilai x
-        // index pertama akan memberikan nilai x dan index
+        // index yang ditumukan berpasangan akan diganti dengan nilainya menjadi "x"
         arr[a] = "x";
         arr[b] = "x";
 
-        // jika sudah terdapat nilai index array yang sama akan memberikan nilai +1
+        // variabel pencatanan nilai ditambah 1 apabila pasangan koas kaki telah ditemukan 
         counterPairSocks++;
 
         // mengakhiri looping array apabila nilai index sudah sama dengan looping array pertama dengan looping array kedua kali
